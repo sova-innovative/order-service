@@ -208,8 +208,8 @@
       <input id="name" autocomplete="name">
       <label for="phone">Phone number</label>
       <input id="phone" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile, WhatsApp preferred">
-      <label for="email">Email <span class="opt-l">(optional)</span></label>
-      <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="For your order confirmation">
+      <label for="email">Email</label>
+      <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="We'll send your order confirmation here">
       <p class="msg" id="emailMsg" role="status"></p>
       <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" tabindex="-1" autocomplete="off"></div>
       <label for="addr">Address</label>
@@ -251,8 +251,8 @@
       <div id="okDemo" class="sample" hidden>Preview mode: no email or WhatsApp was sent.</div>
       <div class="codbox">💵 Pay <strong id="okAmt"></strong> on delivery — by UPI or cash.</div>
       <ul class="oknext">
-        <li id="okWa">We'll WhatsApp you on <strong id="okPhone"></strong> to confirm your delivery slot.</li>
-        <li id="okMail" hidden>A confirmation email is on its way to <strong id="okEmail"></strong>.</li>
+        <li id="okMail">A confirmation email is on its way to <strong id="okEmail"></strong>. If you don't see it, check your spam folder.</li>
+        <li id="okWa">We'll contact you on <strong id="okPhone"></strong> to schedule your delivery.</li>
       </ul>
       <details class="odsum"><summary>Order details</summary><pre id="okSummary"></pre></details>
       <button type="button" class="send wa" id="okDone">Done</button>
@@ -384,11 +384,12 @@ function update(){
     pm.className="msg err"; pm.textContent="We deliver only within Bengaluru right now, and more areas are coming soon. Check the pincode, or message us to hear when we reach you."; }
   else { pm.className="msg ok"; pm.textContent="We deliver here."; }
   const em = $("email").value.trim();
-  if(em && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){ missing.push("a valid email (or leave it empty)"); $("emailMsg").className="msg err"; $("emailMsg").textContent="Check your email address, or leave it empty."; }
+  if(!em){ missing.push("your email"); $("emailMsg").className="msg"; $("emailMsg").textContent=""; }
+  else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){ missing.push("a valid email"); $("emailMsg").className="msg err"; $("emailMsg").textContent="Check your email address — your confirmation goes here."; }
   else { $("emailMsg").className="msg"; $("emailMsg").textContent=""; }
   ready = missing.length === 0;
   ["sendWa","sendIg","confirmBtn"].forEach(id => $(id).setAttribute("aria-disabled", String(!ready)));
-  $("hint").textContent = ready ? "We'll confirm your order on WhatsApp" + (em ? " and email." : ".") : "Still needed: " + missing.join(", ") + ".";
+  $("hint").textContent = ready ? "Your confirmation will be emailed to you." : "Still needed: " + missing.join(", ") + ".";
   if(ready){ const t = orderText(); $("sendWa").href = waUrl(t); $("sendIg").href = igUrl(t); }
   else { $("sendWa").href = "#"; $("sendIg").href = "#"; }
 }
@@ -504,7 +505,7 @@ function showConfirmed(demo){
   $("okId").textContent = order.id;
   $("okAmt").textContent = inr(c.total);
   $("okPhone").textContent = $("phone").value.trim();
-  $("okMail").hidden = !em; $("okEmail").textContent = em;
+  $("okEmail").textContent = em;
   $("okDemo").hidden = !demo;
   $("okSummary").textContent = orderText();
   $("okDlg").showModal();
