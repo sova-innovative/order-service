@@ -150,6 +150,48 @@
   .odsum{text-align:left;margin:8px 0 16px}
   .odsum summary{cursor:pointer;color:var(--ivory-2);font-weight:700;font-size:14.5px}
   .odsum pre{white-space:pre-wrap;font:13.5px/1.5 "Lato",sans-serif;color:var(--ivory-2);margin:10px 0 0}
+  .bulk{margin:14px 2px 0;color:var(--muted);font-size:14px}
+  .bulk a{color:var(--gold-lt)}
+  .note.bad{color:var(--err)}
+  .phonerow{display:flex;align-items:stretch;border:1px solid var(--line);border-radius:12px;background:var(--bg);overflow:hidden}
+  .phonerow .cc{display:grid;place-items:center;padding:0 12px;color:var(--ivory-2);font-weight:700;border-right:1px solid var(--line)}
+  .phonerow input{border:0;border-radius:0;flex:1;min-width:0;letter-spacing:.06em}
+  .phonerow:focus-within{outline:2.5px solid var(--gold-lt);outline-offset:2px}
+  .phonerow input:focus-visible{outline:none}
+  fieldset.addr{border:0;padding:0;margin:14px 0 0}
+  fieldset.addr legend{font-family:"Cinzel",Georgia,serif;font-size:15px;font-weight:600;color:var(--ivory);padding:0;margin-bottom:2px}
+  .pinbox{margin-top:12px}
+  .vbtn.mapbtn{width:100%;padding:13px 14px;font-size:15px;border-radius:12px}
+  .mapbtn .opt-l{font-weight:400}
+  .pinned{margin:8px 0 0;color:var(--ok);font-weight:700;font-size:14px}
+  .mapwrap{margin-top:10px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg)}
+  #map{height:300px;background:#1d2a24}
+  .maptools{display:flex;gap:8px;padding:10px;flex-wrap:wrap}
+  .maptools .vbtn{padding:10px 14px;flex:1;min-width:160px}
+  .savepin{flex:1;margin:0;padding:10px 14px;font-size:15px;min-width:160px}
+  .mapwrap .small-row{padding:0 12px 12px;margin:0}
+  .pinicon{font-size:34px;line-height:34px;text-align:center;filter:drop-shadow(0 2px 3px rgba(0,0,0,.5))}
+  .emrow{display:flex;gap:8px}
+  .emrow input{flex:1;min-width:0}
+  .vbtn{appearance:none;border:1px solid var(--gold);border-radius:12px;padding:0 16px;background:transparent;color:var(--gold-lt);font:700 14.5px "Lato",sans-serif;cursor:pointer;white-space:nowrap}
+  .vbtn:disabled{opacity:.4;cursor:default}
+  .vbtn.busy{opacity:.7;cursor:progress}
+  .captcha{margin:8px 0 4px;min-height:65px}
+  .otp{margin-top:6px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+  .otp label{margin-top:0}
+  .otp input{letter-spacing:.4em;font-weight:700;background:var(--surface)}
+  .small-row{margin:6px 0 0;font-size:13.5px;color:var(--muted)}
+  .verified{margin:6px 0 0;color:var(--ok);font-weight:700;font-size:14.5px}
+  #email[readonly]{opacity:.8}
+  .linkbtn{background:none;border:0;color:var(--gold-lt);font:700 13.5px "Lato",sans-serif;text-decoration:underline;cursor:pointer;padding:0 4px}
+  .contact{margin-top:28px}
+  .contact h2{margin-bottom:12px}
+  .cgrid{display:grid;grid-template-columns:minmax(0,420px);gap:12px}
+  .citem{display:flex;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;color:var(--ivory);text-decoration:none;min-width:0}
+  .citem:hover{border-color:var(--gold)}
+  .citem .ci{font-size:22px}
+  .citem span:last-child{min-width:0;overflow-wrap:anywhere;font-weight:700;font-size:15px}
+  .citem small{display:block;font-weight:400;color:var(--muted);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
   .note{color:var(--muted);font-size:13.5px;margin:10px 0 0;text-align:center}
   .done{display:none;margin-top:16px;border-radius:14px;background:var(--bg);border:1px solid var(--line);padding:14px}
   .done.show{display:block}
@@ -172,7 +214,7 @@
       <svg width="26" height="16" viewBox="0 0 26 16" fill="#CDA54E"><path d="M13 0c2.2 2.6 3 5.6 0 10-3-4.4-2.2-7.4 0-10z"/><path d="M5.5 4c3.2.6 5.6 2.8 6.6 7C8 10.6 6 8 5.5 4z"/><path d="M20.5 4c-3.2.6-5.6 2.8-6.6 7 4.1-.4 6.1-3 6.6-7z"/><path d="M1 9.5c3.5-.4 7.2.8 10.4 2.6C7.6 13.6 3.8 12.6 1 9.5zM25 9.5c-3.5-.4-7.2.8-10.4 2.6 3.8 1.5 7.6.5 10.4-2.6z"/><rect x="4" y="14" width="18" height="1.2" rx=".6"/></svg>
     </div>
     <p class="lede">Makhana from the ponds of Mithila — handpicked for consistent size and packed in small batches with care. Pick your packs and we'll confirm your order on WhatsApp or Instagram.</p>
-    <p class="deliv"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Delivering in Bengaluru for now — more areas soon</p>
+    <p class="deliv"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Delivered within 1 day in Bengaluru — more areas soon</p>
     <p class="deliv launch">🎉 Launch offer: up to 38% off MRP</p>
   </header>
 
@@ -180,6 +222,7 @@
     <section aria-labelledby="pick">
       <h2 id="pick"><span class="n">1</span>Pick your packs</h2>
       <div class="products" id="products"></div>
+      <p class="bulk">Up to ${MAX_PER_PACK_TXT} packs of each per order. Ordering more for an office or event? <a id="bulkLink" href="#">Email us</a>.</p>
     </section>
 
     <aside class="panel" aria-labelledby="order">
@@ -206,14 +249,56 @@
       <h2 style="margin-top:26px"><span class="n">3</span>Delivery details</h2>
       <label for="name">Full name</label>
       <input id="name" autocomplete="name">
+      <p class="msg" id="nameMsg" role="status"></p>
       <label for="phone">Phone number</label>
-      <input id="phone" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile, WhatsApp preferred">
+      <div class="phonerow"><span class="cc">+91</span>
+        <input id="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number"></div>
+      <p class="msg" id="phoneMsg" role="status"></p>
       <label for="email">Email</label>
-      <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="We'll send your order confirmation here">
+      <div class="emrow">
+        <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="We'll send your order confirmation here">
+        <button type="button" class="vbtn" id="sendCode" disabled>Verify</button>
+      </div>
       <p class="msg" id="emailMsg" role="status"></p>
+      <div id="captcha" class="captcha" hidden></div>
+      <div class="otp" id="otpBox" hidden>
+        <label for="otp">Enter the 6-digit code we emailed you</label>
+        <div class="emrow">
+          <input id="otp" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="••••••">
+          <button type="button" class="vbtn" id="checkCode" disabled>Confirm</button>
+        </div>
+        <p class="msg" id="otpMsg" role="status"></p>
+        <p class="small-row">Didn't get it? Check spam, or <button type="button" class="linkbtn" id="resend">send a new code</button>.</p>
+      </div>
+      <p class="verified" id="verified" hidden>✓ Email verified <button type="button" class="linkbtn" id="changeEmail">Change</button></p>
       <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" tabindex="-1" autocomplete="off"></div>
-      <label for="addr">Address</label>
-      <textarea id="addr" autocomplete="street-address"></textarea>
+      <fieldset class="addr">
+        <legend>Delivery address</legend>
+        <div class="two">
+          <div><label for="flat">Flat / House no.</label><input id="flat" autocomplete="address-line1" placeholder="e.g. 302 or #45"></div>
+          <div><label for="bldg">Building / Apartment <span class="opt-l">(optional)</span></label><input id="bldg" placeholder="e.g. Sunrise Apartments"></div>
+        </div>
+        <label for="street">Street / Road</label>
+        <input id="street" autocomplete="address-line2" placeholder="e.g. 5th Cross, 12th Main">
+        <label for="area">Area / Locality</label>
+        <input id="area" list="areaList" autocomplete="off" placeholder="Start typing, e.g. Indiranagar">
+        <datalist id="areaList"><option value="AECS Layout"><option value="Adugodi"><option value="Amruthahalli"><option value="Arekere"><option value="Ashok Nagar"><option value="BTM Layout"><option value="BTM Layout 1st Stage"><option value="BTM Layout 2nd Stage"><option value="Bagalur"><option value="Banashankari"><option value="Banashankari 2nd Stage"><option value="Banashankari 3rd Stage"><option value="Banaswadi"><option value="Bannerghatta Road"><option value="Basavanagudi"><option value="Basaveshwaranagar"><option value="Begur"><option value="Bellandur"><option value="Bellandur Gate"><option value="Benson Town"><option value="Bhoopasandra"><option value="Bilekahalli"><option value="Bommanahalli"><option value="Brigade Road"><option value="Brookefield"><option value="Byatarayanapura"><option value="CV Raman Nagar"><option value="Chamarajpet"><option value="Chandra Layout"><option value="Cooke Town"><option value="Cox Town"><option value="Cunningham Road"><option value="Devanahalli"><option value="Doddaballapur Road"><option value="Doddanekundi"><option value="Dollars Colony"><option value="Domlur"><option value="Ejipura"><option value="Electronic City"><option value="Frazer Town"><option value="Gandhi Nagar"><option value="Garvebhavi Palya"><option value="Girinagar"><option value="HAL"><option value="HRBR Layout"><option value="HSR Layout"><option value="HSR Layout Sector 1"><option value="HSR Layout Sector 2"><option value="HSR Layout Sector 7"><option value="Haralur"><option value="Harlur Road"><option value="Hebbal"><option value="Hebbal Kempapura"><option value="Hennur"><option value="Hesaraghatta Road"><option value="Hongasandra"><option value="Hoodi"><option value="Horamavu"><option value="Hosakerehalli"><option value="Hulimavu"><option value="ITPL"><option value="Indiranagar"><option value="JP Nagar"><option value="JP Nagar 1st Phase"><option value="JP Nagar 6th Phase"><option value="Jakkur"><option value="Jalahalli"><option value="Jayanagar"><option value="Jayanagar 4th Block"><option value="Jayanagar 9th Block"><option value="Jeevan Bima Nagar"><option value="Jeevanahalli"><option value="KR Puram"><option value="Kadubeesanahalli"><option value="Kadugodi"><option value="Kaggadasapura"><option value="Kalyan Nagar"><option value="Kammanahalli"><option value="Kanakapura Road"><option value="Kasavanahalli"><option value="Kasturi Nagar"><option value="Kengeri"><option value="Kodihalli"><option value="Konanakunte"><option value="Koramangala"><option value="Koramangala 1st Block"><option value="Koramangala 5th Block"><option value="Koramangala 8th Block"><option value="Kothanur"><option value="Kudlu Gate"><option value="Kumaraswamy Layout"><option value="Kundalahalli"><option value="Lalbagh Road"><option value="Langford Town"><option value="MG Road"><option value="Madiwala"><option value="Mahadevapura"><option value="Mahalakshmi Layout"><option value="Majestic"><option value="Malleshwaram"><option value="Marathahalli"><option value="Mathikere"><option value="Munnekolala"><option value="Murugeshpalya"><option value="Mysore Road"><option value="Nagarbhavi"><option value="Nagawara"><option value="Nandini Layout"><option value="Nayandahalli"><option value="New Thippasandra"><option value="Old Airport Road"><option value="Old Madras Road"><option value="Padmanabhanagar"><option value="Panathur"><option value="Peenya"><option value="RT Nagar"><option value="Rajajinagar"><option value="Rajarajeshwari Nagar"><option value="Ramamurthy Nagar"><option value="Residency Road"><option value="Richmond Road"><option value="Richmond Town"><option value="Sadashivanagar"><option value="Sadduguntepalya"><option value="Sahakar Nagar"><option value="Sahakara Nagar"><option value="Sanjaynagar"><option value="Sarjapur"><option value="Sarjapur Road"><option value="Seshadripuram"><option value="Shanthinagar"><option value="Shivajinagar"><option value="Silk Board"><option value="Singasandra"><option value="Talaghattapura"><option value="Thanisandra"><option value="Tin Factory"><option value="Tumkur Road"><option value="Ulsoor"><option value="Uttarahalli"><option value="Varthur"><option value="Vasanth Nagar"><option value="Vidyaranyapura"><option value="Vignan Nagar"><option value="Vijayanagar"><option value="Vijinapura"><option value="Viveknagar"><option value="Whitefield"><option value="Wilson Garden"><option value="Yelachenahalli"><option value="Yelahanka"><option value="Yeshwanthpur"></datalist>
+        <label for="landmark">Landmark <span class="opt-l">(optional)</span></label>
+        <input id="landmark" placeholder="e.g. Near Metro station">
+        <p class="msg" id="addrMsg" role="status"></p>
+        <div class="pinbox">
+          <button type="button" class="vbtn mapbtn" id="openMap">📍 Pin my location on the map <span class="opt-l">(recommended)</span></button>
+          <p class="pinned" id="pinnedMsg" hidden></p>
+          <div class="mapwrap" id="mapWrap" hidden>
+            <div id="map" role="application" aria-label="Map to pin your delivery location"></div>
+            <div class="maptools">
+              <button type="button" class="vbtn" id="useLoc">◎ Use my current location</button>
+              <button type="button" class="send wa savepin" id="savePin">Confirm this location</button>
+            </div>
+            <p class="small-row" id="mapMsg">Drag the pin or tap the map to mark your door.</p>
+          </div>
+        </div>
+      </fieldset>
       <div class="two">
         <div><label for="city">City</label><input id="city" value="Bengaluru" readonly aria-readonly="true"></div>
         <div><label for="pin">Pincode</label><input id="pin" inputmode="numeric" maxlength="6" autocomplete="postal-code" aria-describedby="pinMsg"></div>
@@ -252,7 +337,7 @@
       <div class="codbox">💵 Pay <strong id="okAmt"></strong> on delivery — by UPI or cash.</div>
       <ul class="oknext">
         <li id="okMail">A confirmation email is on its way to <strong id="okEmail"></strong>. If you don't see it, check your spam folder.</li>
-        <li id="okWa">We'll contact you on <strong id="okPhone"></strong> to schedule your delivery.</li>
+        <li id="okWa">🚚 <strong>We'll deliver within 1 day.</strong> We'll call <strong id="okPhone"></strong> if we need anything.</li>
       </ul>
       <details class="odsum"><summary>Order details</summary><pre id="okSummary"></pre></details>
       <button type="button" class="send wa" id="okDone">Done</button>
@@ -277,7 +362,14 @@
     <a href="https://feedback.eatpause.com/" target="_blank" rel="noopener">Share your feedback →</a>
   </section>
 
-  <footer>Every pack supports our farmers in Mithila. <a href="https://eatpause.com" target="_blank" rel="noopener">eatpause.com</a></footer>
+  <section class="contact" aria-labelledby="contactTitle">
+    <h2 id="contactTitle">Questions? We're here</h2>
+    <div class="cgrid">
+      <a class="citem" href="mailto:sovainnovativepvtltd@gmail.com"><span class="ci">✉️</span><span><small>Email</small>sovainnovativepvtltd@gmail.com</span></a>
+    </div>
+  </section>
+
+  <footer>Pause Makhana by Sova Innovative Pvt Ltd · Every pack supports our farmers in Mithila. <a href="https://eatpause.com" target="_blank" rel="noopener">eatpause.com</a></footer>
 </div>
 
 <script>
@@ -288,6 +380,10 @@ const DELIVERY_RANGES = [[560001, 560300]];
 const EXTRA_PINCODES = [];   // e.g. "562125" (Sarjapur), "562106" (Anekal), "562157" (Airport)
 // Order API: your Google Apps Script web-app URL. It saves the order to your Google Sheet and sends the
 // confirmation emails (and WhatsApp, once set up). Leave "" to run in preview mode.
+// Captcha: Cloudflare Turnstile site key (free at dash.cloudflare.com → Turnstile). The key below is
+// Cloudflare's TEST key — it always passes. Replace it with your own before going live.
+const TURNSTILE_SITE_KEY = "1x00000000000000000000AA";
+const MAX_PER_PACK = 5;   // most packs of one kind per order; bigger orders are asked to message you
 const ORDER_API_URL = "https://script.google.com/macros/s/AKfycbxwq5GK52YAJT0of1JRuPAGKG__IYwjHhGuCGQFPnkNWUkR-9Mc5Ei2OojtTg4Lpq2x/exec";
 const WHATSAPP_NUMBER = "919986079855";        // WhatsApp number with country code, digits only
 // Discount codes. "expires" is the last moment the code works (India time). Leave it out for no expiry.
@@ -329,7 +425,7 @@ function renderProducts(){
           ${qty[p.id] ? `<div class="qty" role="group" aria-label="Quantity for ${p.name} ${p.size}">
               <button type="button" data-id="${p.id}" data-d="-1" aria-label="Remove one">−</button>
               <output aria-live="polite">${qty[p.id]}</output>
-              <button type="button" data-id="${p.id}" data-d="1" aria-label="Add one" ${qty[p.id]>=20?"disabled":""}>+</button>
+              <button type="button" data-id="${p.id}" data-d="1" aria-label="Add one" ${qty[p.id]>=MAX_PER_PACK?"disabled":""}>+</button>
             </div>`
             : `<button type="button" class="add" data-id="${p.id}" data-d="1">Add</button>`}
         </div>
@@ -340,7 +436,7 @@ function renderProducts(){
 $("products").addEventListener("click", e => {
   const b = e.target.closest("button[data-id]"); if(!b) return;
   const id = b.dataset.id;
-  qty[id] = Math.max(0, Math.min(20, qty[id] + Number(b.dataset.d)));
+  qty[id] = Math.max(0, Math.min(MAX_PER_PACK, qty[id] + Number(b.dataset.d)));
   renderProducts(); update();
   const next = document.querySelector(`#card-${id} button[data-d="${b.dataset.d}"]`) || document.querySelector(`#card-${id} button`);
   if(next) next.focus();
@@ -352,6 +448,222 @@ function calc(){
   const disc = coupon ? Math.round(sub*coupon.pct/100) : 0;
   const mrp = items.reduce((s,i)=>s+i.mrpLine,0);
   return {items, mrp, launch: mrp-sub, sub, disc, total: sub-disc, saved: mrp-(sub-disc)};
+}
+
+// ----- Email checks: format + common typos (e.g. gmial.com → gmail.com) -----
+// Placeholder and throwaway addresses people type instead of their real email
+const FAKE_USERS = ["test","testing","tester","test123","abc","abcd","abcde","abc123","xyz","xyz123","asdf","asdfgh","qwerty","demo","sample",
+  "fake","dummy","none","na","nil","no","noemail","nomail","noreply","donotreply","admin","user","email","mail","myemail","example","hello","hi","temp","random","customer","someone","anonymous"];
+const FAKE_DOMAINS = ["example.com","example.org","example.net","test.com","testing.com","email.com","domain.com","abc.com","xyz.com",
+  "mailinator.com","yopmail.com","guerrillamail.com","sharklasers.com","10minutemail.com","tempmail.com","temp-mail.org","trashmail.com",
+  "dispostable.com","getnada.com","maildrop.cc","throwawaymail.com","fakeinbox.com","mailnesia.com","mintemail.com","emailondeck.com"];
+// Repeats (aaaa, 1212, abcabc), straight sequences (12345, 98765, abcdef), or all digits unless it's a 10-digit mobile number
+function looksMadeUp(u){
+  if(/^(.+?)\1+$/.test(u)) return true;
+  const isSeq = str => { if(str.length < 5) return false;
+    const step = str.charCodeAt(1) - str.charCodeAt(0);
+    if(Math.abs(step) !== 1) return false;
+    for(let i = 2; i < str.length; i++) if(str.charCodeAt(i) - str.charCodeAt(i-1) !== step) return false;
+    return true; };
+  if(isSeq(u)) return true;
+  if(/^\d+$/.test(u) && !/^[6-9]\d{9}$/.test(u)) return true;
+  return false;
+}
+const EMAIL_DOMAINS = ["gmail.com","yahoo.com","yahoo.co.in","yahoo.in","hotmail.com","outlook.com","live.com","icloud.com","rediffmail.com","protonmail.com","zoho.com","me.com"];
+function emailProblem(em){
+  if(!em) return "";
+  if(!/^[A-Za-z0-9._%+'-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(em)) return "That email doesn't look right — check for typos or spaces.";
+  const dom = em.split("@")[1].toLowerCase();
+  if(/\.(con|cmo|comm|om|co\.com)$/.test(dom) || dom.includes("..")) return "The end of that email looks mistyped — check the part after @.";
+  const user = em.split("@")[0].toLowerCase().replace(/[._+-]/g, "");
+  if(FAKE_DOMAINS.some(f => dom === f || dom.endsWith("." + f)) || FAKE_USERS.includes(user) || looksMadeUp(user))
+    return "Please use your own email address — your order confirmation is sent there.";
+  return "";
+}
+function editDistance(a,b){
+  const d = Array.from({length:a.length+1}, (_,i) => [i, ...Array(b.length).fill(0)]);
+  for(let j=1;j<=b.length;j++) d[0][j]=j;
+  for(let i=1;i<=a.length;i++) for(let j=1;j<=b.length;j++)
+    d[i][j] = Math.min(d[i-1][j]+1, d[i][j-1]+1, d[i-1][j-1]+(a[i-1]===b[j-1]?0:1),
+      (i>1&&j>1&&a[i-1]===b[j-2]&&a[i-2]===b[j-1]) ? d[i-2][j-2]+1 : Infinity);
+  return d[a.length][b.length];
+}
+function emailSuggestion(em){
+  if(!em || !em.includes("@")) return null;
+  const [user, dom] = [em.slice(0, em.lastIndexOf("@")), em.slice(em.lastIndexOf("@")+1).toLowerCase()];
+  if(EMAIL_DOMAINS.includes(dom)) return null;
+  let best = null, bestD = 3;
+  for(const k of EMAIL_DOMAINS){ const dd = editDistance(dom, k); if(dd < bestD){ best = k; bestD = dd; } }
+  return best && bestD <= 2 ? `${user}@${best}` : null;
+}
+
+// ----- Email verification (6-digit code) + captcha -----
+let emailToken = null, verifiedEmail = "", sendingCode = false, tsWidget = null, tsToken = "", pendingSend = false;
+window.onTurnstileLoad = function(){
+  tsWidget = turnstile.render("#captcha", { sitekey: TURNSTILE_SITE_KEY, theme: "dark", size: "flexible",
+    callback: t => { tsToken = t; if(pendingSend){ pendingSend = false; sendCode(); } },
+    "expired-callback": () => { tsToken = ""; }, "error-callback": () => { tsToken = ""; } });
+};
+// Load the captcha script only after the callback above exists
+(function(){ if(!ORDER_API_URL) return;   // preview mode: no captcha
+  const sc = document.createElement("script");
+  sc.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onTurnstileLoad&render=explicit";
+  sc.async = true; document.head.appendChild(sc); })();
+async function api(body){
+  if(!ORDER_API_URL){   // preview mode: pretend, code is 123456
+    await new Promise(r => setTimeout(r, 400));
+    if(body.action === "sendCode") return { ok: true };
+    if(body.action === "verifyCode") return body.code === "123456" ? { ok: true, token: "preview" } : { ok: false, error: "That code isn't right." };
+  }
+  const res = await fetch(ORDER_API_URL, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(body) });
+  return res.json();
+}
+async function sendCode(){
+  const em = $("email").value.trim(), m = $("emailMsg");
+  if(emailProblem(em)) return;
+  if(!tsToken && ORDER_API_URL){   // show the captcha and send as soon as it's solved
+    $("captcha").hidden = false; pendingSend = true;
+    m.className = "msg"; m.textContent = "Quick check that you're human 👇";
+    return;
+  }
+  sendingCode = true; $("sendCode").classList.add("busy"); $("sendCode").textContent = "Sending…"; update();
+  try {
+    const out = await api({ action: "sendCode", email: em, captcha: tsToken });
+    if(!out.ok) throw new Error(out.error || "Couldn't send the code. Please try again.");
+    $("otpBox").hidden = false; $("captcha").hidden = true; $("otp").value = ""; $("otp").focus();
+    $("otpMsg").className = "msg"; $("otpMsg").textContent = ORDER_API_URL ? `Code sent to ${em}. It's valid for 10 minutes.` : "Preview mode: use code 123456.";
+    m.textContent = "";
+  } catch(err) {
+    m.className = "msg err"; m.textContent = err.message;
+  } finally {
+    tsToken = ""; if(window.turnstile && tsWidget !== null) turnstile.reset(tsWidget);
+    sendingCode = false; $("sendCode").classList.remove("busy"); $("sendCode").textContent = "Verify"; update();
+  }
+}
+async function checkCode(){
+  const code = $("otp").value.trim(), em = $("email").value.trim(), m = $("otpMsg");
+  if(!/^\d{6}$/.test(code)) return;
+  $("checkCode").classList.add("busy"); $("checkCode").textContent = "Checking…";
+  try {
+    const out = await api({ action: "verifyCode", email: em, code });
+    if(!out.ok) throw new Error(out.error || "That code isn't right.");
+    emailToken = out.token; verifiedEmail = em;
+    $("email").readOnly = true; $("otpBox").hidden = true; $("verified").hidden = false; $("sendCode").hidden = true;
+  } catch(err) {
+    m.className = "msg err"; m.textContent = err.message;
+  } finally {
+    $("checkCode").classList.remove("busy"); $("checkCode").textContent = "Confirm"; update();
+  }
+}
+function resetEmailVerification(){
+  emailToken = null; verifiedEmail = "";
+  $("email").readOnly = false; $("verified").hidden = true; $("sendCode").hidden = false; $("otpBox").hidden = true;
+  update();
+}
+$("sendCode").addEventListener("click", sendCode);
+$("resend").addEventListener("click", () => { $("otpBox").hidden = true; sendCode(); });
+$("otp").addEventListener("input", () => { $("otp").value = $("otp").value.replace(/\D/g, ""); $("checkCode").disabled = $("otp").value.length !== 6; if($("otp").value.length === 6) checkCode(); });
+$("checkCode").addEventListener("click", checkCode);
+$("changeEmail").addEventListener("click", () => { resetEmailVerification(); $("email").focus(); });
+
+// ----- Structured address -----
+function fullAddress(){
+  const v = id => $(id).value.trim();
+  const parts = [v("flat"), v("bldg"), v("street"), v("area")].filter(Boolean);
+  return parts.join(", ") + (v("landmark") ? ` (Landmark: ${v("landmark")})` : "");
+}
+
+// ----- Map pin (OpenStreetMap + Leaflet, free, no API key) -----
+let pinLoc = null, map = null, marker = null, leafletLoading = null;
+const BLR = [12.9716, 77.5946];
+const mapsLink = () => `https://www.google.com/maps?q=${pinLoc.lat},${pinLoc.lng}`;
+function loadLeaflet(){
+  if(window.L) return Promise.resolve();
+  if(leafletLoading) return leafletLoading;
+  leafletLoading = new Promise((res, rej) => {
+    const css = document.createElement("link"); css.rel = "stylesheet";
+    css.href = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"; document.head.appendChild(css);
+    const js = document.createElement("script"); js.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js";
+    js.onload = res; js.onerror = rej; document.head.appendChild(js);
+  });
+  return leafletLoading;
+}
+async function openMap(){
+  $("mapWrap").hidden = false;
+  try { await loadLeaflet(); } catch(_) { $("mapMsg").textContent = "The map couldn't load. You can skip this step — your typed address is enough."; return; }
+  if(!map){
+    const start = pinLoc ? [pinLoc.lat, pinLoc.lng] : BLR;
+    map = L.map("map", { zoomControl: true }).setView(start, pinLoc ? 17 : 12);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
+    marker = L.marker(start, { draggable: true, icon: L.divIcon({ className: "pinicon", html: "📍", iconSize: [34,34], iconAnchor: [17,32] }) }).addTo(map);
+    map.on("click", e => { marker.setLatLng(e.latlng); });
+  }
+  setTimeout(() => map.invalidateSize(), 50);
+  $("mapWrap").scrollIntoView({ block: "center", behavior: "smooth" });
+}
+$("openMap").addEventListener("click", openMap);
+$("useLoc").addEventListener("click", () => {
+  if(!navigator.geolocation){ $("mapMsg").textContent = "Your browser can't share location — drag the pin instead."; return; }
+  $("mapMsg").textContent = "Finding you…";
+  navigator.geolocation.getCurrentPosition(p => {
+    const ll = [p.coords.latitude, p.coords.longitude];
+    marker.setLatLng(ll); map.setView(ll, 17);
+    $("mapMsg").textContent = "Adjust the pin to your exact door if needed, then confirm.";
+  }, () => { $("mapMsg").textContent = "Couldn't get your location. Allow location access, or drag the pin instead."; },
+  { enableHighAccuracy: true, timeout: 10000 });
+});
+$("savePin").addEventListener("click", async () => {
+  if(!marker) return;
+  const ll = marker.getLatLng();
+  pinLoc = { lat: +ll.lat.toFixed(6), lng: +ll.lng.toFixed(6) };
+  $("mapWrap").hidden = true; $("pinnedMsg").hidden = false;
+  $("pinnedMsg").innerHTML = `✓ Location pinned <button type="button" class="linkbtn" id="changePin">Change</button>`;
+  $("changePin").onclick = openMap;
+  $("openMap").hidden = true;
+  update();
+  // Fill in area and pincode from the pin, if the customer hasn't typed them
+  try {
+    const r = await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&zoom=18&addressdetails=1&lat=${pinLoc.lat}&lon=${pinLoc.lng}`,
+      { headers: { "Accept-Language": "en" } });
+    const a = (await r.json()).address || {};
+    const area = a.suburb || a.neighbourhood || a.quarter || a.city_district || "";
+    if(area && !$("area").value.trim()) $("area").value = area;
+    if(a.road && !$("street").value.trim()) $("street").value = a.road;
+    if(a.postcode && /^\d{6}$/.test(a.postcode.replace(/\s/g,"")) && !$("pin").value.trim()) $("pin").value = a.postcode.replace(/\s/g,"");
+    if(area || a.postcode) $("pinnedMsg").innerHTML = `✓ Location pinned${area ? " near " + area : ""} <button type="button" class="linkbtn" id="changePin">Change</button>`;
+    $("changePin").onclick = openMap;
+    update();
+  } catch(_) {}
+});
+
+// ----- Name, phone and address checks -----
+function validName(n){
+  const letters = n.replace(/[^A-Za-z\u0900-\u097F]/g, "");
+  if(!/^[A-Za-z\u0900-\u097F .'-]+$/.test(n) || letters.length < 2) return false;
+  const u = letters.toLowerCase();
+  return !FAKE_USERS.includes(u) && !/^(.+?)\1+$/.test(u);
+}
+function normPhone(p){ let d = p.replace(/[\s()-]/g, ""); if(d.startsWith("+91")) d = d.slice(3); else if(/^91\d{10}$/.test(d)) d = d.slice(2); else if(/^0\d{10}$/.test(d)) d = d.slice(1); return d; }
+const touched = {};
+function phoneProblem(p){
+  if(!p) return "";
+  if(!/^\d+$/.test(p)) return "Numbers only, please.";
+  if(p.length < 10) return `Enter all 10 digits (${p.length} so far).`;
+  if(!/^[6-9]/.test(p)) return "Indian mobile numbers start with 6, 7, 8 or 9.";
+  if(!validPhone(p)) return "That doesn't look like a real mobile number.";
+  return "";
+}
+function validPhone(p){
+  const d = normPhone(p);
+  if(!/^[6-9]\d{9}$/.test(d)) return false;
+  if(/^(\d)\1+$/.test(d) || /^(\d+?)\1+$/.test(d)) return false;               // 9999999999, 9898989898
+  if("98765432101234567890".includes(d) || "01234567890123456789".includes(d)) return false;  // 9876543210
+  return new Set(d).size >= 4;                                                  // at least 4 different digits
+}
+function validAddress(a){
+  const letters = a.replace(/[^A-Za-z\u0900-\u097F]/g, "");
+  return a.length >= 10 && letters.length >= 5 && !/^(.+?)\1+$/.test(a.replace(/\s/g, "").toLowerCase());
 }
 
 function update(){
@@ -375,19 +687,39 @@ function update(){
   $("save").textContent = `You save ${inr(saved)} on MRP`;
   const missing = [];
   if(!items.length) missing.push("a pack");
-  if(!$("name").value.trim()) missing.push("your name");
-  if(!/^\+?[\d\s-]{10,14}$/.test($("phone").value.trim())) missing.push("a valid phone number");
-  if(!$("addr").value.trim()) missing.push("your address");
+  const nm = $("name").value.trim(), ph = $("phone").value.trim(), ad = fullAddress();
+  const show = (id, text) => { $(id).className = text ? "msg err" : "msg"; $(id).textContent = text; };
+  const nmErr = !nm ? "" : !validName(nm) ? "Please enter your real name — letters only." : "";
+  const phErr = phoneProblem(ph);
+  const fl = $("flat").value.trim(), st = $("street").value.trim(), ar = $("area").value.trim();
+  const adErr = !fl && !st && !ar ? "" :
+    !fl ? "Add your flat or house number." :
+    !/[A-Za-z]{3,}/.test(st) ? "Add your street or road name." :
+    !/[A-Za-z]{3,}/.test(ar) ? "Add your area or locality." :
+    !validAddress(ad) ? "Please check your address." : "";
+  show("nameMsg", touched.name ? nmErr : "");
+  show("phoneMsg", (touched.phone || ph.length >= 10) ? phErr : "");
+  show("addrMsg", touched.addr ? adErr : "");
+  if(!nm) missing.push("your name"); else if(nmErr) missing.push("your real name");
+  if(!ph) missing.push("your mobile number"); else if(phErr) missing.push("a valid 10-digit mobile number");
+  if(!fl && !st && !ar) missing.push("your address"); else if(adErr) missing.push("your full address");
   const pin = $("pin").value.trim(), pm = $("pinMsg");
   if(!/^\d{6}$/.test(pin)){ missing.push("a 6-digit pincode"); pm.className="msg"; pm.textContent=""; }
   else if(!deliversTo(pin)){ missing.push("a Bengaluru pincode");
     pm.className="msg err"; pm.textContent="We deliver only within Bengaluru right now, and more areas are coming soon. Check the pincode, or message us to hear when we reach you."; }
   else { pm.className="msg ok"; pm.textContent="We deliver here."; }
   const em = $("email").value.trim();
+  const emErr = emailProblem(em), emFix = emErr ? null : emailSuggestion(em);
   if(!em){ missing.push("your email"); $("emailMsg").className="msg"; $("emailMsg").textContent=""; }
-  else if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){ missing.push("a valid email"); $("emailMsg").className="msg err"; $("emailMsg").textContent="Check your email address — your confirmation goes here."; }
+  else if(emErr){ missing.push("a valid email"); $("emailMsg").className="msg err"; $("emailMsg").textContent=emErr; }
+  else if(emFix){ $("emailMsg").className="msg err";
+    $("emailMsg").innerHTML = `Did you mean <button type="button" class="linkbtn" id="emFix">${emFix}</button>?`;
+    $("emFix").onclick = () => { $("email").value = emFix; update(); }; }
   else { $("emailMsg").className="msg"; $("emailMsg").textContent=""; }
+  $("sendCode").disabled = !em || !!emErr || !!emailToken || sendingCode;
+  if(em && !emErr && !emailToken) missing.push("email verification (tap Verify)");
   ready = missing.length === 0;
+  $("hint").classList.remove("bad");
   ["sendWa","sendIg","confirmBtn"].forEach(id => $(id).setAttribute("aria-disabled", String(!ready)));
   $("hint").textContent = ready ? "Your confirmation will be emailed to you." : "Still needed: " + missing.join(", ") + ".";
   if(ready){ const t = orderText(); $("sendWa").href = waUrl(t); $("sendIg").href = igUrl(t); }
@@ -411,7 +743,16 @@ $("apply").addEventListener("click", () => {
   update();
 });
 $("code").addEventListener("keydown", e => { if(e.key==="Enter") $("apply").click(); });
-["name","phone","email","addr","pin"].forEach(id => $(id).addEventListener("input", update));
+["name","phone","email","flat","bldg","street","area","landmark","pin"].forEach(id => $(id).addEventListener("input", update));
+["name","phone"].forEach(id => $(id).addEventListener("blur", () => { touched[id] = true; update(); }));
+["flat","street","area"].forEach(id => $(id).addEventListener("blur", () => { if($(id).value.trim()) touched.addr = true; update(); }));
+$("area").addEventListener("change", () => { touched.addr = true; update(); });
+$("phone").addEventListener("input", () => {
+  let v = $("phone").value.replace(/\D/g, "");
+  if(v.length > 10 && v.startsWith("91")) v = v.slice(2);          // pasted +91XXXXXXXXXX
+  if(v.length === 11 && v.startsWith("0")) v = v.slice(1);         // pasted 0XXXXXXXXXX
+  $("phone").value = v.slice(0, 10); update();
+}, true);
 
 function orderText(){
   const {items, sub, disc, total} = calc();
@@ -424,7 +765,8 @@ function orderText(){
   L.push(`Total: ${inr(total)}`, `(You saved ${inr(calc().saved)} on MRP)`, "",
     `Name: ${$("name").value.trim()}`,
     `Phone: ${$("phone").value.trim()}`,
-    `Address: ${$("addr").value.trim()}, ${$("city").value.trim()} - ${$("pin").value.trim()}`);
+    `Address: ${fullAddress()}, ${$("city").value.trim()} - ${$("pin").value.trim()}`);
+  if(pinLoc) L.push(`Location: ${mapsLink()}`);
   if($("email").value.trim()) L.push(`Email: ${$("email").value.trim()}`);
   L.push("", "Payment: Pay on delivery (UPI or cash)");
   return L.join("\n");
@@ -486,7 +828,7 @@ function istDate(){
   return g("year") + g("month") + g("day");
 }
 function newOrderId(){ return `PM-${istDate()}-${String(Math.floor(1000 + Math.random()*9000))}`; }
-function formSig(){ return JSON.stringify([qty, coupon && coupon.code, ["name","phone","email","addr","pin"].map(id => $(id).value.trim())]); }
+function formSig(){ return JSON.stringify([qty, coupon && coupon.code, ["name","phone","email","flat","bldg","street","area","landmark","pin"].map(id => $(id).value.trim()), pinLoc]); }
 function orderPayload(){
   const c = calc();
   return {
@@ -494,9 +836,11 @@ function orderPayload(){
     items: c.items.map(i => ({ id: i.id, name: `${i.name} ${i.size}`, qty: i.q, price: i.price, mrp: i.mrp, line: i.line })),
     mrp: c.mrp, launchOffer: c.launch, subtotal: c.sub,
     coupon: coupon ? coupon.code : "", couponPct: coupon ? coupon.pct : 0, couponDiscount: c.disc, total: c.total,
-    name: $("name").value.trim(), phone: $("phone").value.trim(), email: $("email").value.trim(),
-    address: $("addr").value.trim(), city: "Bengaluru", pincode: $("pin").value.trim(),
-    payment: "Pay on delivery", website: $("website").value
+    name: $("name").value.trim(), phone: normPhone($("phone").value.trim()), email: $("email").value.trim(),
+    address: fullAddress(), city: "Bengaluru", pincode: $("pin").value.trim(),
+    area: $("area").value.trim(), landmark: $("landmark").value.trim(),
+    lat: pinLoc ? pinLoc.lat : "", lng: pinLoc ? pinLoc.lng : "", mapLink: pinLoc ? mapsLink() : "",
+    payment: "Pay on delivery", website: $("website").value, emailToken
   };
 }
 function showConfirmed(demo){
@@ -524,6 +868,8 @@ $("confirmBtn").addEventListener("click", async () => {
       body: JSON.stringify(orderPayload()), signal: ctrl.signal });
     clearTimeout(timer);
     const out = await res.json();
+    if(!out.ok && out.reverify){ resetEmailVerification(); $("emailMsg").className="msg err"; $("emailMsg").textContent = out.error; $("email").scrollIntoView({block:"center", behavior:"smooth"}); return; }
+    if(!out.ok && out.invalid){ $("hint").textContent = out.error; $("hint").classList.add("bad"); $("hint").scrollIntoView({block:"center", behavior:"smooth"}); return; }
     if(!out.ok) throw new Error(out.error || "failed");
     showConfirmed(false);
   } catch(err) {
@@ -542,6 +888,8 @@ $("okDone").addEventListener("click", () => {
   renderProducts(); update(); window.scrollTo({top:0, behavior:"smooth"});
 });
 
+document.querySelector(".bulk").innerHTML = document.querySelector(".bulk").innerHTML.replace("${MAX_PER_PACK_TXT}", MAX_PER_PACK);
+$("bulkLink").href = `mailto:sovainnovativepvtltd@gmail.com?subject=${encodeURIComponent("Bulk order enquiry — Pause Makhana")}`;
 renderProducts(); update();
 </script>
 </body>
