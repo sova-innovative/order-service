@@ -207,16 +207,6 @@
   .prod{min-width:0}
   .prod h3,.price{overflow-wrap:anywhere}
   @media (max-width:420px){.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.prod .body{padding:10px 10px 12px}.prod h3{font-size:14px}.price{font-size:17px}}
-  footer.site-foot{margin-top:44px;padding-top:26px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;line-height:1.6}
-  footer.site-foot a{color:var(--gold-lt);overflow-wrap:anywhere}
-  .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px 32px}
-  .fcol p{margin:0 0 6px}
-  .fbrand{font-family:"Cinzel",Georgia,serif;font-weight:600;font-size:17px;letter-spacing:.06em;color:var(--ivory)}
-  .fhead{font-weight:700;color:var(--ivory-2);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
-  footer.site-foot address{font-style:normal}
-  .flabel{display:inline-block;min-width:44px;color:var(--muted);font-weight:700}
-  .fval{color:var(--ivory-2);letter-spacing:.03em;overflow-wrap:anywhere}
-  .fcopy{margin:22px 0 0;padding-top:14px;border-top:1px solid var(--line);font-size:13px;text-align:center}
   button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{outline:2.5px solid var(--gold-lt);outline-offset:2px}
   @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -386,25 +376,6 @@
     </div>
   </section>
 
-  <footer class="site-foot">
-    <div class="fgrid">
-      <div class="fcol">
-        <p class="fbrand">Pause Makhana</p>
-        <p>A brand of <strong>Sova Innovative Private Limited</strong>. Every pack supports our farmers in Mithila.</p>
-        <p><a href="https://eatpause.com" target="_blank" rel="noopener">eatpause.com</a></p>
-      </div>
-      <div class="fcol">
-        <p class="fhead">Registered office</p>
-        <address>Village – Mahamadpur Boary,<br>Nowdega, Nowdega Balha,<br>Samastipur, Darbhanga – 848209,<br>Bihar, India</address>
-      </div>
-      <div class="fcol">
-        <p class="fhead">Company details</p>
-        <p><span class="flabel">CIN</span> <span class="fval">U46304BR2026PTC087572</span></p>
-        <p><span class="flabel">Email</span> <a href="mailto:sovainnovativepvtltd@gmail.com">sovainnovativepvtltd@gmail.com</a></p>
-      </div>
-    </div>
-    <p class="fcopy">© <span id="fyear">2026</span> Sova Innovative Private Limited. All rights reserved.</p>
-  </footer>
 </div>
 
 <script>
@@ -926,7 +897,6 @@ $("okDone").addEventListener("click", () => {
 
 document.querySelector(".bulk").innerHTML = document.querySelector(".bulk").innerHTML.replace("${MAX_PER_PACK_TXT}", MAX_PER_PACK);
 $("bulkLink").href = `mailto:sovainnovativepvtltd@gmail.com?subject=${encodeURIComponent("Bulk order enquiry — Pause Makhana")}`;
-$("fyear").textContent = new Date().getFullYear();
 renderProducts(); update();
 </script>
 </body>
